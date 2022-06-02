@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-module.exports ={
+module.exports = {
   entry: './js/script.js',
   output: {
     path: path.resolve(__dirname, './'),
@@ -9,13 +9,13 @@ module.exports ={
   module: {
     rules: [
       {
-        teste: /\.js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use:{
+        use: {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-transform-runtime']
+            plugins: ['@babel/plugin-transform-runtime'],
           },
         },
       },
